@@ -1,0 +1,96 @@
+/*Global rule*/
+* {
+}
+
+body {
+  font-family: "Courier", "Times", "Helvetica", "initial";
+  margin: 10px;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+.main-header {
+  background-color: #152657;
+}
+
+.navigation-main {
+  color: white;
+  background-color: #152657;
+  display: inline-block;
+  width: 100%;
+  padding: 11px 8px;
+}
+
+.navigation-main > div {
+  display: inline-block;
+  width: 30%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.navigation-items {
+  display: inline-block;
+  margin: 0;
+  width: 66%;
+
+  display: inline-block;
+  text-align: right;
+}
+
+.navigation-item {
+  list-style: none;
+  display: inline-block;
+  padding: 0 40px;
+}
+
+.navigation-item a {
+  color: white;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+.navigation-item a:hover,
+.navigation-item a:active {
+  background-color: #ccd4eb;
+  color: black;
+  border-radius: 8px;
+}
+
+article {
+  font-size: 1em;
+}
+
+.box1 {
+  background-color: aqua;
+  font-size: 20px;
+  height: 900px;
+  width: 700px;
+  margin: 2em;
+  font-family: "Times";
+}
+
+/*Style combinator and this is not a inheritance. This is descendent combinator, applies for p falls under box (no matter what comes b/t box1 and p and it canot be on anuy child level*/
+.box1 p {
+  font-family: "Times New Roman", "Times, serif";
+  font-size: 4em;
+}
+
+/*General sibling is similar to descendent combinator but it applies only if its direct sibling on same level also no matters what comes b/t two. div1 ~ p*/
+/*Child combinator is same as general sibling div1 > p*/
+
+/*Adjacent combinator, applies only p follows h3*/
+.box1 p + h3 {
+  font-size: 3em;
+}
+
+.box2 {
+  background-color: darkcyan;
+  font-size: 16px;
+  height: 200px;
+  width: 300px;
+  margin: 1em;
+  padding: 10px;
+  border: 12px solid black;
+  font-family: inherit;
+}
